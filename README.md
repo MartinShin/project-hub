@@ -2,7 +2,7 @@
 
 내 웹 프로젝트들을 한눈에 모아 보여주는 원페이지 허브 사이트.
 
-- 라이브: https://martinshin.vercel.app
+- 라이브: https://hocheolshin.vercel.app
 - 정적 HTML 단일 파일(`index.html`), 빌드 과정 없음
 - `master`에 푸시하면 Vercel이 자동 배포
 
