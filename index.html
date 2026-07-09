@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martin Shin — 프로젝트</title>
+<meta name="description" content="데이터, 언론, 사람에 관한 작은 웹 서비스들을 만듭니다.">
+<meta property="og:title" content="Martin Shin — 프로젝트">
+<meta property="og:description" content="데이터, 언론, 사람에 관한 작은 웹 서비스들을 만듭니다.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a1a2e'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>M</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root {
+    --bg: #fafafa;
+    --card-bg: #ffffff;
+    --text: #1a1a2e;
+    --text-sub: #6b7280;
+    --border: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0,0,0,.06);
+    --shadow-hover: 0 8px 24px rgba(0,0,0,.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111118;
+      --card-bg: #1c1c26;
+      --text: #f0f0f5;
+      --text-sub: #9ca3af;
+      --border: #2b2b38;
+      --shadow: 0 1px 3px rgba(0,0,0,.3);
+      --shadow-hover: 0 8px 24px rgba(0,0,0,.45);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+      system-ui, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 88px 0 56px; }
+  header h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.02em; }
+  header p.tagline { margin-top: 12px; font-size: 1.05rem; color: var(--text-sub); max-width: 560px; }
+  header .links { margin-top: 20px; }
+  header .links a {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.9rem; color: var(--text-sub); text-decoration: none;
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 6px 14px; transition: all .15s ease;
+  }
+  header .links a:hover { color: var(--text); border-color: var(--text-sub); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+  .card {
+    display: flex; flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+  .banner {
+    height: 120px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+  }
+  .banner .glyph-text { font-weight: 900; color: rgba(255,255,255,.92); font-size: 2.6rem; letter-spacing: -0.02em; }
+  .card-body { padding: 20px 22px 22px; flex: 1; display: flex; flex-direction: column; }
+  .card-body h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+  .card-body p { margin-top: 6px; font-size: 0.9rem; color: var(--text-sub); flex: 1; }
+  .card-meta { margin-top: 14px; display: flex; align-items: center; justify-content: space-between; }
+  .tag {
+    font-size: 0.72rem; font-weight: 600; color: var(--text-sub);
+    border: 1px solid var(--border); border-radius: 6px; padding: 2px 8px;
+  }
+  .domain { font-size: 0.75rem; color: var(--text-sub); opacity: .8; }
+
+  .b-honmaek  { background: linear-gradient(135deg, #7f1d4e 0%, #3b1d5e 100%); }
+  .b-quote    { background: linear-gradient(135deg, #b45309 0%, #7c2d12 100%); }
+  .b-hyebong  { background: linear-gradient(135deg, #0f766e 0%, #14532d 100%); }
+  .b-chaebol  { background: linear-gradient(135deg, #1d4ed8 0%, #172554 100%); }
+  .b-altruist { background: linear-gradient(135deg, #be123c 0%, #9d174d 100%); }
+  .b-ppe      { background: linear-gradient(135deg, #4d7c0f 0%, #365314 100%); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0 48px;
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Martin Shin</h1>
+    <p class="tagline">데이터, 언론, 사람에 관한 작은 웹 서비스들을 만듭니다.
+      대부분 공개 데이터를 모아 보기 좋게 정리한 것들입니다.</p>
+    <div class="links">
+      <a href="https://github.com/MartinShin" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <main class="grid">
+
+    <a class="card" href="https://honmaek.com" target="_blank" rel="noopener">
+      <div class="banner b-honmaek">💍</div>
+      <div class="card-body">
+        <h2>한국사회혼맥</h2>
+        <p>재벌·정계·언론이 혼인으로 얽힌 관계망을 인터랙티브 지도로 보여주는 네트워크 데이터베이스.</p>
+        <div class="card-meta"><span class="tag">데이터 시각화</span><span class="domain">honmaek.com</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://quote-coroke.vercel.app" target="_blank" rel="noopener">
+      <div class="banner b-quote"><span class="glyph-text">“ ”</span></div>
+      <div class="card-body">
+        <h2>따옴표고로케</h2>
+        <p>한국 언론 정치·사회면 제목의 따옴표 사용 비율을 매시간 자동 집계하고 해외 매체와 비교하는 통계.</p>
+        <div class="card-meta"><span class="tag">미디어 통계</span><span class="domain">quote-coroke.vercel.app</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://chaebol-watch.vercel.app" target="_blank" rel="noopener">
+      <div class="banner b-chaebol"><span class="glyph-text">₩</span></div>
+      <div class="card-body">
+        <h2>한국부자순위</h2>
+        <p>DART 공시 기반, 개인별 상장주식 직접 보유분 평가액 순위를 집계하는 데이터 서비스.</p>
+        <div class="card-meta"><span class="tag">데이터</span><span class="domain">chaebol-watch.vercel.app</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://hyebong-bot.vercel.app" target="_blank" rel="noopener">
+      <div class="banner b-hyebong">🪷</div>
+      <div class="card-body">
+        <h2>혜봉선생님의 가르침</h2>
+        <p>혜봉 선생님의 생전 법문과 선수행학교 기록을 바탕으로 마음에 대한 질문에 답하는 AI 문답.</p>
+        <div class="card-meta"><span class="tag">AI 챗봇</span><span class="domain">hyebong-bot.vercel.app</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://altruist-game.vercel.app" target="_blank" rel="noopener">
+      <div class="banner b-altruist">🤝</div>
+      <div class="card-body">
+        <h2>이타적 인간 게임</h2>
+        <p>서울대 교양수업 '이타적 인간과 이기적 인간의 이해'를 위한 실험 게임.</p>
+        <div class="card-meta"><span class="tag">교육 게임</span><span class="domain">altruist-game.vercel.app</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://ppe-class-game.vercel.app" target="_blank" rel="noopener">
+      <div class="banner b-ppe">🎲</div>
+      <div class="card-body">
+        <h2>PPE Class Game</h2>
+        <p>PPE(철학·정치·경제) 수업에서 사용하는 게임 모음.</p>
+        <div class="card-meta"><span class="tag">교육 게임</span><span class="domain">ppe-class-game.vercel.app</span></div>
+      </div>
+    </a>
+
+  </main>
+
+  <footer>
+    <span>© 2026 Martin Shin</span>
+    <span>Built with Claude Code · <a href="https://github.com/MartinShin" target="_blank" rel="noopener">github.com/MartinShin</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
