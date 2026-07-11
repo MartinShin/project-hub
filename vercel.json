@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/quote", "destination": "https://quote-coroke.vercel.app/quote" },
+    { "source": "/quote/:path*", "destination": "https://quote-coroke.vercel.app/quote/:path*" },
+    { "source": "/rich", "destination": "https://chaebol-watch.vercel.app/rich" },
+    { "source": "/rich/:path*", "destination": "https://chaebol-watch.vercel.app/rich/:path*" },
+    { "source": "/altruist", "destination": "https://altruist-game.vercel.app/altruist" },
+    { "source": "/altruist/:path*", "destination": "https://altruist-game.vercel.app/altruist/:path*" },
+    { "source": "/meditation", "destination": "https://hyebong-bot.vercel.app/meditation" },
+    { "source": "/meditation/:path*", "destination": "https://hyebong-bot.vercel.app/meditation/:path*" },
+    { "source": "/holdem", "destination": "https://holdem-arena.vercel.app/holdem" },
+    { "source": "/holdem/:path*", "destination": "https://holdem-arena.vercel.app/holdem/:path*" }
+  ]
+}
