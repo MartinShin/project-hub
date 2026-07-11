@@ -9,6 +9,8 @@
     { "source": "/meditation", "destination": "https://hyebong-bot.vercel.app/meditation" },
     { "source": "/meditation/:path*", "destination": "https://hyebong-bot.vercel.app/meditation/:path*" },
     { "source": "/holdem", "destination": "https://holdem-arena.vercel.app/holdem" },
-    { "source": "/holdem/:path*", "destination": "https://holdem-arena.vercel.app/holdem/:path*" }
+    { "source": "/holdem/:path*", "destination": "https://holdem-arena.vercel.app/holdem/:path*" },
+    { "source": "/riddle", "destination": "https://online-riddle.vercel.app/riddle" },
+    { "source": "/riddle/:path*", "destination": "https://online-riddle.vercel.app/riddle/:path*" }
   ]
 }
