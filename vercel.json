@@ -13,6 +13,8 @@
     { "source": "/riddle", "destination": "https://online-riddle.vercel.app/riddle" },
     { "source": "/riddle/:path*", "destination": "https://online-riddle.vercel.app/riddle/:path*" },
     { "source": "/skyscrapers", "destination": "https://skyscrapers-puzzle.vercel.app/skyscrapers" },
-    { "source": "/skyscrapers/:path*", "destination": "https://skyscrapers-puzzle.vercel.app/skyscrapers/:path*" }
+    { "source": "/skyscrapers/:path*", "destination": "https://skyscrapers-puzzle.vercel.app/skyscrapers/:path*" },
+    { "source": "/paradox", "destination": "https://paradox-game.vercel.app/paradox" },
+    { "source": "/paradox/:path*", "destination": "https://paradox-game.vercel.app/paradox/:path*" }
   ]
 }
