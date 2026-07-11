@@ -11,6 +11,8 @@
     { "source": "/holdem", "destination": "https://holdem-arena.vercel.app/holdem" },
     { "source": "/holdem/:path*", "destination": "https://holdem-arena.vercel.app/holdem/:path*" },
     { "source": "/riddle", "destination": "https://online-riddle.vercel.app/riddle" },
-    { "source": "/riddle/:path*", "destination": "https://online-riddle.vercel.app/riddle/:path*" }
+    { "source": "/riddle/:path*", "destination": "https://online-riddle.vercel.app/riddle/:path*" },
+    { "source": "/skyscrapers", "destination": "https://skyscrapers-puzzle.vercel.app/skyscrapers" },
+    { "source": "/skyscrapers/:path*", "destination": "https://skyscrapers-puzzle.vercel.app/skyscrapers/:path*" }
   ]
 }
