@@ -15,6 +15,8 @@
     { "source": "/skyscrapers", "destination": "https://skyscrapers-puzzle.vercel.app/skyscrapers" },
     { "source": "/skyscrapers/:path*", "destination": "https://skyscrapers-puzzle.vercel.app/skyscrapers/:path*" },
     { "source": "/paradox", "destination": "https://paradox-game.vercel.app/paradox" },
-    { "source": "/paradox/:path*", "destination": "https://paradox-game.vercel.app/paradox/:path*" }
+    { "source": "/paradox/:path*", "destination": "https://paradox-game.vercel.app/paradox/:path*" },
+    { "source": "/cdjs", "destination": "https://cdjs-tau.vercel.app/cdjs" },
+    { "source": "/cdjs/:path*", "destination": "https://cdjs-tau.vercel.app/cdjs/:path*" }
   ]
 }
