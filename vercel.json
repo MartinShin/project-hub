@@ -19,6 +19,8 @@
     { "source": "/paradox", "destination": "https://paradox-game.vercel.app/paradox" },
     { "source": "/paradox/:path*", "destination": "https://paradox-game.vercel.app/paradox/:path*" },
     { "source": "/cdjs", "destination": "https://cdjs-tau.vercel.app/cdjs" },
-    { "source": "/cdjs/:path*", "destination": "https://cdjs-tau.vercel.app/cdjs/:path*" }
+    { "source": "/cdjs/:path*", "destination": "https://cdjs-tau.vercel.app/cdjs/:path*" },
+    { "source": "/cinema", "destination": "https://korean-film-influence-map.vercel.app/cinema" },
+    { "source": "/cinema/:path*", "destination": "https://korean-film-influence-map.vercel.app/cinema/:path*" }
   ]
 }
