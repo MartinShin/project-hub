@@ -1,7 +1,5 @@
 {
   "rewrites": [
-    { "source": "/hobby", "destination": "https://hobby-hub-seven.vercel.app/hobby" },
-    { "source": "/hobby/:path*", "destination": "https://hobby-hub-seven.vercel.app/hobby/:path*" },
     { "source": "/quote", "destination": "https://quote-coroke.vercel.app/quote" },
     { "source": "/quote/:path*", "destination": "https://quote-coroke.vercel.app/quote/:path*" },
     { "source": "/rich", "destination": "https://chaebol-watch.vercel.app/rich" },
