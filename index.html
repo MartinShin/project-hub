@@ -45,17 +45,18 @@
   header { padding: 88px 0 56px; }
   header h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.02em; }
   header p.tagline { margin-top: 12px; font-size: 1.05rem; color: var(--text-sub); max-width: 560px; }
-  header .links { margin-top: 20px; }
-  header .links a,
-  header .links button {
+  .restricted-access {
+    display: flex; justify-content: center;
+    padding: 0 0 48px;
+  }
+  .restricted-access button {
     display: inline-flex; align-items: center; gap: 6px;
     font-size: 0.9rem; color: var(--text-sub); text-decoration: none;
     border: 1px solid var(--border); border-radius: 999px;
     padding: 6px 14px; transition: all .15s ease;
     background: transparent; font: inherit; cursor: pointer;
   }
-  header .links a:hover,
-  header .links button:hover { color: var(--text); border-color: var(--text-sub); }
+  .restricted-access button:hover { color: var(--text); border-color: var(--text-sub); }
 
   .grid {
     display: grid;
@@ -121,9 +122,6 @@
   <header>
     <h1>프로젝트 신호철</h1>
     <p class="tagline">아이디어가 생각날 때 마다 조금씩 만들어보는 테스트 공간.</p>
-    <div class="links">
-      <button type="button" onclick="alert('접근할 수 없습니다')">🚧 개발중인 프로젝트(미완성)</button>
-    </div>
   </header>
 
   <main class="grid">
@@ -241,6 +239,10 @@
   <footer>
     <span>© 2026 신호철</span>
   </footer>
+
+  <div class="restricted-access">
+    <button type="button" onclick="alert('접근할 수 없습니다')">🚧 개발중인 프로젝트(미완성)</button>
+  </div>
 
 </div>
 </body>
