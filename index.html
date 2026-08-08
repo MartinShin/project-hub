@@ -58,11 +58,15 @@
   }
   .restricted-access button:hover { color: var(--text); border-color: var(--text-sub); }
 
-  .grid {
+  .project-group {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding-bottom: 40px;
+  }
+  .project-group + .project-group {
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
   }
   .card {
     display: flex; flex-direction: column;
@@ -107,7 +111,6 @@
   .b-paradox  { background: linear-gradient(135deg, #991b1b 0%, #1e3a8a 100%); }
   .b-cdjs     { background: linear-gradient(135deg, #001a70 0%, #001150 100%); }
   .b-decision { background: linear-gradient(135deg, #c2410c 0%, #9f1239 100%); }
-  .b-books    { background: linear-gradient(135deg, #7c4a32 0%, #2b1a12 100%); }
 
   footer {
     border-top: 1px solid var(--border);
@@ -127,142 +130,139 @@
     <p class="tagline">아이디어 테스트</p>
   </header>
 
-  <main class="grid">
+  <main>
 
-    <a class="card" href="/quote" target="_blank" rel="noopener">
-      <div class="banner b-quote"><span class="glyph-text">“ ”</span></div>
-      <div class="card-body">
-        <h2>따옴표고로케</h2>
-        <p>한국 언론 정치·사회면 제목의 따옴표 사용 비율을 매시간 자동 집계하고 해외 매체와 비교하는 통계.</p>
-        <div class="card-meta"><span class="tag">미디어 통계</span><span class="domain">shinhocheol.com/quote</span></div>
-      </div>
-    </a>
+    <section class="project-group" aria-label="주식·혼맥 프로젝트">
+      <a class="card" href="/rich" target="_blank" rel="noopener">
+        <div class="banner b-chaebol"><span class="glyph-text">₩</span></div>
+        <div class="card-body">
+          <h2>주식 부자 순위</h2>
+          <p>DART 공시 기반, 개인별 상장주식 직접 보유분 평가액 순위를 집계하는 데이터 서비스.</p>
+          <div class="card-meta"><span class="tag">데이터</span><span class="domain">shinhocheol.com/rich</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="/rich" target="_blank" rel="noopener">
-      <div class="banner b-chaebol"><span class="glyph-text">₩</span></div>
-      <div class="card-body">
-        <h2>주식 부자 순위</h2>
-        <p>DART 공시 기반, 개인별 상장주식 직접 보유분 평가액 순위를 집계하는 데이터 서비스.</p>
-        <div class="card-meta"><span class="tag">데이터</span><span class="domain">shinhocheol.com/rich</span></div>
-      </div>
-    </a>
+      <a class="card" href="https://honmaek.com" target="_blank" rel="noopener">
+        <div class="banner b-honmaek">💍</div>
+        <div class="card-body">
+          <h2>한국사회혼맥</h2>
+          <p>주요 기업가문과 정계·언론계 인사들 사이의 혼인 관계를 인터랙티브 지도로 보여주는 네트워크 데이터베이스.</p>
+          <div class="card-meta"><span class="tag">데이터 시각화</span><span class="domain">honmaek.com</span></div>
+        </div>
+      </a>
+    </section>
 
-    <a class="card" href="https://honmaek.com" target="_blank" rel="noopener">
-      <div class="banner b-honmaek">💍</div>
-      <div class="card-body">
-        <h2>한국사회혼맥</h2>
-        <p>주요 기업가문과 정계·언론계 인사들 사이의 혼인 관계를 인터랙티브 지도로 보여주는 네트워크 데이터베이스.</p>
-        <div class="card-meta"><span class="tag">데이터 시각화</span><span class="domain">honmaek.com</span></div>
-      </div>
-    </a>
+    <section class="project-group" aria-label="기타 프로젝트">
+      <a class="card" href="/quote" target="_blank" rel="noopener">
+        <div class="banner b-quote"><span class="glyph-text">“ ”</span></div>
+        <div class="card-body">
+          <h2>따옴표고로케</h2>
+          <p>한국 언론 정치·사회면 제목의 따옴표 사용 비율을 매시간 자동 집계하고 해외 매체와 비교하는 통계.</p>
+          <div class="card-meta"><span class="tag">미디어 통계</span><span class="domain">shinhocheol.com/quote</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="https://our-stage-one-minute.flyingmarco.chatgpt.site" target="_blank" rel="noopener">
-      <div class="banner b-stage">🎭</div>
-      <div class="card-body">
-        <h2>모두의 무대</h2>
-        <p>AI 상대 배우와 한국어 음성으로 짧은 장면을 함께 연기해 보는 1분 연기 경험.</p>
-        <div class="card-meta"><span class="tag">AI 연기 실험</span><span class="domain">모두의 무대 열기</span></div>
-      </div>
-    </a>
+      <a class="card" href="https://our-stage-one-minute.flyingmarco.chatgpt.site" target="_blank" rel="noopener">
+        <div class="banner b-stage">🎭</div>
+        <div class="card-body">
+          <h2>모두의 무대</h2>
+          <p>AI 상대 배우와 한국어 음성으로 짧은 장면을 함께 연기해 보는 1분 연기 경험.</p>
+          <div class="card-meta"><span class="tag">AI 연기 실험</span><span class="domain">모두의 무대 열기</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="/riddle" target="_blank" rel="noopener">
-      <div class="banner b-riddle"><span class="glyph-text">?</span></div>
-      <div class="card-body">
-        <h2>온라인 방탈출</h2>
-        <p>텍스트 기반 방탈출 퍼즐. 문제의 정답을 찾아야 숨겨진 다음 페이지로 넘어갈 수 있다.</p>
-        <div class="card-meta"><span class="tag">퍼즐 게임</span><span class="domain">shinhocheol.com/riddle</span></div>
-      </div>
-    </a>
+      <a class="card" href="/riddle" target="_blank" rel="noopener">
+        <div class="banner b-riddle"><span class="glyph-text">?</span></div>
+        <div class="card-body">
+          <h2>온라인 방탈출</h2>
+          <p>텍스트 기반 방탈출 퍼즐. 문제의 정답을 찾아야 숨겨진 다음 페이지로 넘어갈 수 있다.</p>
+          <div class="card-meta"><span class="tag">퍼즐 게임</span><span class="domain">shinhocheol.com/riddle</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="/holdem" target="_blank" rel="noopener">
-      <div class="banner b-holdem"><span class="glyph-text">♠</span></div>
-      <div class="card-body">
-        <h2>홀덤 아레나</h2>
-        <p>브라우저에서 바로 즐기는 텍사스 홀덤 포커 게임.</p>
-        <div class="card-meta"><span class="tag">게임</span><span class="domain">shinhocheol.com/holdem</span></div>
-      </div>
-    </a>
+      <a class="card" href="/holdem" target="_blank" rel="noopener">
+        <div class="banner b-holdem"><span class="glyph-text">♠</span></div>
+        <div class="card-body">
+          <h2>홀덤 아레나</h2>
+          <p>브라우저에서 바로 즐기는 텍사스 홀덤 포커 게임.</p>
+          <div class="card-meta"><span class="tag">게임</span><span class="domain">shinhocheol.com/holdem</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="https://ai-models-bbs-hoche.flyingmarco.chatgpt.site" target="_blank" rel="noopener">
-      <div class="banner b-ai-bbs"><span class="glyph-text">AI</span></div>
-      <div class="card-body">
-        <h2>AI들의 게시판</h2>
-        <p>여러 회사의 AI와 사람 회원이 함께 글을 쓰고 짧은 댓글과 잡담을 이어 가는 게시판.</p>
-        <div class="card-meta"><span class="tag">AI 커뮤니티</span><span class="domain">AI들의 게시판 열기</span></div>
-      </div>
-    </a>
+      <a class="card" href="https://ai-models-bbs-hoche.flyingmarco.chatgpt.site" target="_blank" rel="noopener">
+        <div class="banner b-ai-bbs"><span class="glyph-text">AI</span></div>
+        <div class="card-body">
+          <h2>AI들의 게시판</h2>
+          <p>여러 회사의 AI와 사람 회원이 함께 글을 쓰고 짧은 댓글과 잡담을 이어 가는 게시판.</p>
+          <div class="card-meta"><span class="tag">AI 커뮤니티</span><span class="domain">AI들의 게시판 열기</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="/skyscrapers" target="_blank" rel="noopener">
-      <div class="banner b-sky"><span class="glyph-text">🏙</span></div>
-      <div class="card-body">
-        <h2>스카이스크래퍼</h2>
-        <p>테두리 숫자만큼 빌딩이 보이게 채우는 논리 퍼즐. 4×4부터 9×9까지, 모든 문제는 유일해가 보장된다.</p>
-        <div class="card-meta"><span class="tag">퍼즐 게임</span><span class="domain">shinhocheol.com/skyscrapers</span></div>
-      </div>
-    </a>
+      <a class="card" href="/skyscrapers" target="_blank" rel="noopener">
+        <div class="banner b-sky"><span class="glyph-text">🏙</span></div>
+        <div class="card-body">
+          <h2>스카이스크래퍼</h2>
+          <p>테두리 숫자만큼 빌딩이 보이게 채우는 논리 퍼즐. 4×4부터 9×9까지, 모든 문제는 유일해가 보장된다.</p>
+          <div class="card-meta"><span class="tag">퍼즐 게임</span><span class="domain">shinhocheol.com/skyscrapers</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="/altruist" target="_blank" rel="noopener">
-      <div class="banner b-altruist">🤝</div>
-      <div class="card-body">
-        <h2>이타적 인간 게임</h2>
-        <p>서울대 교양수업 '이타적 인간과 이기적 인간의 이해'를 위한 실험 게임.</p>
-        <div class="card-meta"><span class="tag">교육 게임</span><span class="domain">shinhocheol.com/altruist</span></div>
-      </div>
-    </a>
+      <a class="card" href="https://leavenworth-case.flyingmarco.chatgpt.site/" target="_blank" rel="noopener">
+        <div class="banner b-leavenworth"><span class="glyph-text">L</span></div>
+        <div class="card-body">
+          <h2>리븐워스 사건</h2>
+          <p>1878년 뉴욕의 저택에서 증언과 단서를 대조하며 범인을 추리하는 자유 심문 미스터리 게임.</p>
+          <div class="card-meta"><span class="tag">추리 게임</span><span class="domain">리븐워스 사건 열기</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="/paradox" target="_blank" rel="noopener">
-      <div class="banner b-paradox"><span class="glyph-text">🎲</span></div>
-      <div class="card-body">
-        <h2>알레역설-엘스버그 역설</h2>
-        <p>알레의 역설과 엘즈버그의 역설을 직접 체험하는 의사결정 게임. 내 선택이 왜 모순인지 시각적으로 보여준다.</p>
-        <div class="card-meta"><span class="tag">체험 게임</span><span class="domain">shinhocheol.com/paradox</span></div>
-      </div>
-    </a>
+      <a class="card" href="/meditation" target="_blank" rel="noopener">
+        <div class="banner b-hyebong"><span class="glyph-text">◯</span></div>
+        <div class="card-body">
+          <h2>명상 문답</h2>
+          <p>명상에 관한 질문에 답해 주는 대화형 AI 페르소나. 마음을 가라앉히고 싶을 때 문답을 나눌 수 있다.</p>
+          <div class="card-meta"><span class="tag">AI 페르소나</span><span class="domain">shinhocheol.com/meditation</span></div>
+        </div>
+      </a>
+    </section>
 
-    <a class="card" href="/cdjs" target="_blank" rel="noopener">
-      <div class="banner b-cdjs"><span class="glyph-text">CDJS</span></div>
-      <div class="card-body">
-        <h2>CDJS</h2>
-        <p>경제철학을 공부하는 학부생 모임의 커뮤니티. 회원제 게시판으로 시작해 기능을 늘려가는 중.</p>
-        <div class="card-meta"><span class="tag">커뮤니티</span><span class="domain">shinhocheol.com/cdjs</span></div>
-      </div>
-    </a>
+    <section class="project-group" aria-label="서울대 프로젝트">
+      <a class="card" href="/altruist" target="_blank" rel="noopener">
+        <div class="banner b-altruist">🤝</div>
+        <div class="card-body">
+          <h2>이타적 인간 게임</h2>
+          <p>서울대 교양수업 '이타적 인간과 이기적 인간의 이해'를 위한 실험 게임.</p>
+          <div class="card-meta"><span class="tag">교육 게임</span><span class="domain">shinhocheol.com/altruist</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="https://cdjs-decision-game-pilot.flyingmarco.chatgpt.site" target="_blank" rel="noopener">
-      <div class="banner b-decision">🗳</div>
-      <div class="card-body">
-        <h2>의사결정 게임</h2>
-        <p>참가자와 AI가 동등한 플레이어로 의사결정 규칙을 직접 설계하고, 사회후생 점수로 승부를 가리는 CDJS 시범 게임.</p>
-        <div class="card-meta"><span class="tag">교육 게임</span><span class="domain">의사결정 게임 열기</span></div>
-      </div>
-    </a>
+      <a class="card" href="/paradox" target="_blank" rel="noopener">
+        <div class="banner b-paradox"><span class="glyph-text">🎲</span></div>
+        <div class="card-body">
+          <h2>알레역설-엘스버그 역설</h2>
+          <p>알레의 역설과 엘즈버그의 역설을 직접 체험하는 의사결정 게임. 내 선택이 왜 모순인지 시각적으로 보여준다.</p>
+          <div class="card-meta"><span class="tag">체험 게임</span><span class="domain">shinhocheol.com/paradox</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="https://leavenworth-case.flyingmarco.chatgpt.site/" target="_blank" rel="noopener">
-      <div class="banner b-leavenworth"><span class="glyph-text">L</span></div>
-      <div class="card-body">
-        <h2>리븐워스 사건</h2>
-        <p>1878년 뉴욕의 저택에서 증언과 단서를 대조하며 범인을 추리하는 자유 심문 미스터리 게임.</p>
-        <div class="card-meta"><span class="tag">추리 게임</span><span class="domain">리븐워스 사건 열기</span></div>
-      </div>
-    </a>
+      <a class="card" href="/cdjs" target="_blank" rel="noopener">
+        <div class="banner b-cdjs"><span class="glyph-text">CDJS</span></div>
+        <div class="card-body">
+          <h2>CDJS</h2>
+          <p>경제철학을 공부하는 학부생 모임의 커뮤니티. 회원제 게시판으로 시작해 기능을 늘려가는 중.</p>
+          <div class="card-meta"><span class="tag">커뮤니티</span><span class="domain">shinhocheol.com/cdjs</span></div>
+        </div>
+      </a>
 
-    <a class="card" href="/meditation" target="_blank" rel="noopener">
-      <div class="banner b-hyebong"><span class="glyph-text">◯</span></div>
-      <div class="card-body">
-        <h2>명상 문답</h2>
-        <p>명상에 관한 질문에 답해 주는 대화형 AI 페르소나. 마음을 가라앉히고 싶을 때 문답을 나눌 수 있다.</p>
-        <div class="card-meta"><span class="tag">AI 페르소나</span><span class="domain">shinhocheol.com/meditation</span></div>
-      </div>
-    </a>
-
-    <a class="card" href="/books" target="_blank" rel="noopener">
-      <div class="banner b-books"><span class="glyph-text">📖</span></div>
-      <div class="card-body">
-        <h2>서재</h2>
-        <p>읽은 책의 리뷰와 별점을 표지 책장 형태로 모아 보여주는 독서 기록.</p>
-        <div class="card-meta"><span class="tag">독서 기록</span><span class="domain">shinhocheol.com/books</span></div>
-      </div>
-    </a>
+      <a class="card" href="https://cdjs-decision-game-pilot.flyingmarco.chatgpt.site" target="_blank" rel="noopener">
+        <div class="banner b-decision">🗳</div>
+        <div class="card-body">
+          <h2>의사결정 게임</h2>
+          <p>참가자와 AI가 동등한 플레이어로 의사결정 규칙을 직접 설계하고, 사회후생 점수로 승부를 가리는 CDJS 시범 게임.</p>
+          <div class="card-meta"><span class="tag">교육 게임</span><span class="domain">의사결정 게임 열기</span></div>
+        </div>
+      </a>
+    </section>
 
   </main>
 
